@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhiyant Singh - Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      color: #222;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+    .hero {
+      background: url('https://i.imgur.com/4Vtl6Bl.jpg') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    .btn {
+      background: #f39c12;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #e67e22;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .about img {
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      flex: 1;
+      font-size: 1.1rem;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+    .portfolio-item {
+      background: #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .portfolio-item:hover {
+      transform: scale(1.03);
+    }
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+    }
+    .portfolio-item p {
+      padding: 0.75rem 1rem;
+      margin: 0;
+      font-weight: 600;
+      background: #fff;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .services-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+    .services-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .services-list li::before {
+      content: "✓";
+      color: #f39c12;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: #f39c12;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #e67e22;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+    .social-icons a {
+      color: #f39c12;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #e67e22;
+    }
+    @media (max-width: 600px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about img {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Abhiyant Singh</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Creative Videographer & Social Media Content Creator</h2>
+  <p>Over 1,700 videos, viral shorts, and engaging livestreams.</p>
+  <a href="#portfolio" class="btn">View My Work</a>
+</section>
+
+<section id="about" class="about">
+  <img src="https://i.imgur.com/4Vtl6Bl.jpg" alt="Abhiyant Singh" />
+  <div class="about-text">
+    <p>I run my own YouTube channel: <a href="https://www.youtube.com/@abhiyant_singh" target="_blank">youtube.com/@abhiyant_singh</a>, where I’ve independently created and published over 1,700 videos covering live streams, comedy sketches, and gaming videos.</p>
+    <p>I have also worked on projects for famous Indian YouTubers, managing the entire production process—from concept creation and shooting to editing and publishing.</p>
+    <p>I shoot using a Canon M50 mirrorless camera and Zoom H4n microphone to ensure professional-quality visuals and audio. For editing, I primarily use CapCut and Final Cut Pro, depending on the content type and platform.</p>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2 style="text-align:center; margin-bottom:1rem;">Portfolio</h2>
+  <div class="portfolio-grid">
+    <a href="https://youtube.com/shorts/DhzbbOYDdl0" target="_blank" class="portfolio-item">
+      <img src="https://i.ytimg.com/vi/DhzbbOYDdl0/maxresdefault.jpg" alt="Viral YouTube Short" />
+      <p>Viral YouTube Short (374K+ views)</p>
+    </a>
+    <a href="https://www.youtube.com/live/X8ffiXSOG7Q" target="_blank" class="portfolio-item">
+      <img src="https://i.ytimg.com/vi/X8ffiXSOG7Q/maxresdefault.jpg" alt="Gaming Livestream" />
+      <p>Gaming Livestream (26K+ views)</p>
+    </a>
+  </div>
+</section>
+
+<section id="services">
+  <h2 style="text-align:center; margin-bottom:1rem;">Services</h2>
+  <ul class="services-list">
+    <li>Videography</li>
+    <li>Social Media Management</li>
+    <li>Video Editing & Production</li>
+    <li>Collaboration & Consulting</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2 style="text-align:center; margin-bottom:1rem;">Contact Me</h2>
+  <form class="contact-form" action="mailto:abhiyantsingh007@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Your Name" required />
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="Your Email" required />
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <div style="text-align:center; margin-top:1rem;">
+    <p>Email: <a href="mailto:abhiyantsingh007@gmail.com">abhiyantsingh007@gmail.com</a></p>
+    <p>Location: Dubai / India</p>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@abhiyant_singh" target="_blank" aria-label="YouTube">🎥</a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">📸</a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">💼</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Abhiyant Singh. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
