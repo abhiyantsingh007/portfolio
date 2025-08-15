@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhiyant Singh - Videography & Social Media Portfolio</title>
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Icons -->
   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
   <style>
     /* Reset & Base */
@@ -17,12 +15,8 @@
     img { display: block; max-width:100%; height:auto; }
 
     /* Header */
-    header { background:#111; color:#fff; position:sticky; top:0; z-index:100;
-      box-shadow:0 2px 10px rgba(0,0,0,0.3);
-    }
-    nav.container { display:flex; justify-content:space-between; align-items:center;
-      max-width:1200px; margin:auto; padding:1rem;
-    }
+    header { background:#111; color:#fff; position:sticky; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.3); }
+    nav.container { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; padding:1rem; }
     nav .logo { font-size:1.5rem; font-weight:700; letter-spacing:1px; cursor:pointer; }
     nav ul { display:flex; gap:1rem; }
     nav ul li { list-style:none; }
@@ -33,71 +27,45 @@
     .menu-toggle { display:none; font-size:1.5rem; cursor:pointer; }
     @media(max-width:768px) {
       .menu-toggle { display:block; }
-      nav ul { position: fixed; top:0; right: -100%; height:100vh; width:200px; background:#111;
-        flex-direction:column; align-items:flex-start; padding:2rem; gap:2rem; transition:right 0.3s;
-      }
+      nav ul { position: fixed; top:0; right: -100%; height:100vh; width:200px; background:#111; flex-direction:column; align-items:flex-start; padding:2rem; gap:2rem; transition:right 0.3s; }
       nav ul.open { right:0; }
     }
 
     /* Hero */
-    .hero { background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-      url('https://images.unsplash.com/photo-1594824476967-48c8b9642731?auto=format&fit=crop&w=1400&q=80') center/cover;
-      height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-      color:#fff; text-align:center; padding:0 1rem; animation:fadeInUp 0.8s ease-out;
-    }
+    .hero { background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1594824476967-48c8b9642731?auto=format&fit=crop&w=1400&q=80') center/cover; height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; text-align:center; padding:0 1rem; animation:fadeInUp 0.8s ease-out; }
     .hero h1 { font-size:3rem; margin-bottom:0.5rem; }
     .hero p { font-size:1.25rem; margin-bottom:1.5rem; max-width:700px; }
-    .hero .btn { background:#f39c12; color:#111; padding:0.75rem 2rem; font-weight:700;
-      border-radius:30px; transition:transform 0.3s;
-    }
+    .hero .btn { background:#f39c12; color:#111; padding:0.75rem 2rem; font-weight:700; border-radius:30px; transition:transform 0.3s; }
     .hero .btn:hover { transform:scale(1.05); }
 
     /* Section Titles */
-    h2.section-title { font-size:2rem; text-align:center; margin-bottom:1.5rem; color:#111;
-      position:relative; display:inline-block;
-    }
+    h2.section-title { font-size:2rem; text-align:center; margin-bottom:1.5rem; color:#111; position:relative; display:inline-block; }
     h2.section-title::after { content:''; display:block; width:50%; height:4px; background:#f39c12; margin:0.5rem auto 0; border-radius:2px; }
 
     /* About */
-    .about { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem;
-      background:#fff; padding:2rem; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1);
-      animation:fadeInUp 0.8s ease-out;
-    }
+    .about { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; background:#fff; padding:2rem; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1); animation:fadeInUp 0.8s ease-out; }
     .about img { border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
     .about .text { display:flex; flex-direction:column; gap:1rem; }
     .about .text p { margin-bottom:0.5rem; }
     .about .stats { display:flex; gap:1.5rem; margin-top:1rem; }
-    .about .stats div { background:#f0f0f0; padding:1rem 1.5rem; border-radius:8px;
-      text-align:center; flex:1; box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    }
+    .about .stats div { background:#f0f0f0; padding:1rem 1.5rem; border-radius:8px; text-align:center; flex:1; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
     .about .stats div h3 { margin:0; font-size:1.5rem; color:#f39c12; }
     .about .stats div span { display:block; margin-top:0.3rem; font-weight:500; color:#555; }
 
     /* Portfolio */
-    .portfolio { background:#f0f0f0; padding:2rem; border-radius:8px;
-      animation:fadeInUp 0.8s ease-out 0.2s;
-    }
+    .portfolio { background:#f0f0f0; padding:2rem; border-radius:8px; animation:fadeInUp 0.8s ease-out 0.2s; }
     .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
-    .portfolio-item { background:#fff; border-radius:8px; overflow:hidden;
-      box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;
-    }
+    .portfolio-item { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; }
     .portfolio-item:hover { transform:translateY(-5px); }
     .portfolio-item img { width:100%; }
     .portfolio-item p { padding:0.75rem; font-weight:500; text-align:center; }
 
     /* Services */
-    .services-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem;
-      animation:fadeInUp 0.8s ease-out 0.4s;
-    }
-    .services-list li { background:#fff; padding:1rem; border-radius:8px;
-      box-shadow:0 4px 15px rgba(0,0,0,0.1); display:flex; align-items:center; gap:0.75rem;
-      font-weight:500;
-    }
+    .services-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; animation:fadeInUp 0.8s ease-out 0.4s; }
+    .services-list li { background:#fff; padding:1rem; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1); display:flex; align-items:center; gap:0.75rem; font-weight:500; }
 
     /* Contact */
-    .contact { background:#fff; padding:2rem; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1);
-      text-align:center; animation:fadeInUp 0.8s ease-out 0.6s;
-    }
+    .contact { background:#fff; padding:2rem; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; animation:fadeInUp 0.8s ease-out 0.6s; }
     .contact p { margin-bottom:1rem; font-size:1.1rem; }
     .social-icons { display:flex; justify-content:center; gap:1rem; margin-top:1rem; }
     .social-icons a { font-size:1.5rem; color:#f39c12; transition:transform 0.3s; }
@@ -107,137 +75,131 @@
     footer { background:#111; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
 
     /* Animations */
-    @keyframes fadeInUp {
-      from { opacity:0; transform:translateY(20px); }
-      to { opacity:1; transform:translateY(0); }
+    @keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero h1 { font-size:2rem; }
+      .about, .portfolio, .services-list, .contact { padding:1rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav class="container">
-      <div class="logo">Abhiyant Singh</div>
-      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-      <ul id="nav-list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <!-- Contact Icons in Header -->
-      <div class="header-contact" style="display:flex; gap:1rem; align-items:center;">
-        <a href="mailto:abhiyantsingh007@gmail.com" style="color:#fff; font-size:1.2rem;"><i class="fas fa-envelope"></i></a>
-        <a href="tel:+971504807641" style="color:#fff; font-size:1.2rem;"><i class="fas fa-phone-alt"></i></a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <h1>Creative Videographer & Social Media Manager</h1>
-    <p>Over 1,700 videos, viral Shorts, livestreams, and bespoke content for brands.</p>
-    <a href="#portfolio" class="btn">View My Work</a>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about" style="background:#fff; padding:2rem; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.1); animation:fadeInUp 0.8s ease-out;">
-      <div class="text" style="display:flex; flex-direction:column; gap:1rem;">
-        <p>I run the YouTube channel <a href="https://www.youtube.com/@abhiyant_singh" target="_blank" style="color:#f39c12;">@abhiyant_singh</a> which has grown to a vibrant community.</p>
-        <div class="stats" style="display:flex; gap:1.5rem; margin-top:1rem;">
-          <div style="background:#f0f0f0; padding:1rem 1.5rem; border-radius:8px; flex:1; text-align:center;">
-            <h3 style="margin:0; font-size:1.5rem; color:#f39c12;">21.6K</h3>
-            <span style="display:block; margin-top:0.3rem; font-weight:500; color:#555;">Subscribers</span>
-          </div>
-          <div style="background:#f0f0f0; padding:1rem 1.5rem; border-radius:8px; flex:1; text-align:center;">
-            <h3 style="margin:0; font-size:1.5rem; color:#f39c12;">1.7K</h3>
-            <span style="display:block; margin-top:0.3rem; font-weight:500; color:#555;">Videos</span>
-          </div>
-        </div>
-        <p style="margin-top:1.5rem;">I’ve handled end-to-end production for top Indian creators, using Canon M50, Zoom H4n, Final Cut Pro, and CapCut to deliver polished, engaging content.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <h2 class="section-title">Portfolio</h2>
-    <div class="portfolio">
-      <div class="portfolio-grid">
-  <a href="https://www.youtube.com/shorts/SEWV1kTsEIY" target="_blank" class="portfolio-item">
-    <img src="https://i.ytimg.com/vi/SEWV1kTsEIY/maxresdefault.jpg" alt="Recent Shoot 2" />
-    <p>Recent Shoot – Short Video 4</p>
-  </a>
-  <a href="https://www.youtube.com/shorts/KZXDRJ0kGdU" target="_blank" class="portfolio-item">
-    <img src="https://i.ytimg.com/vi/KZXDRJ0kGdU/maxresdefault.jpg" alt="Recent Shoot 1" />
-    <p>Recent Shoot – Short Video 3</p>
-  </a>
-  <a href="https://youtube.com/shorts/DhzbbOYDdl0" target="_blank" class="portfolio-item">
-    <img src="https://i.ytimg.com/vi/DhzbbOYDdl0/maxresdefault.jpg" alt="Viral YouTube Short" />
-    <p>Viral YouTube Short (374K+ views)</p>
-  </a>
-  <a href="https://www.youtube.com/live/X8ffiXSOG7Q" target="_blank" class="portfolio-item">
-    <img src="https://i.ytimg.com/vi/X8ffiXSOG7Q/maxresdefault.jpg" alt="Gaming Livestream" />
-    <p>Gaming Livestream (26K+ views
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services">
-    <h2 class="section-title">Services</h2>
-    <ul class="services-list">
-      <li><i class="fas fa-video"></i> Video Production & Cinematic Shoots</li>
-      <li><i class="fas fa-hashtag"></i> Social Media Content Creation & Management</li>
-      <li><i class="fas fa-cut"></i> Editing (CapCut, Final Cut Pro)</li>
-      <li><i class="fas fa-handshake"></i> Collaboration & Brand Campaigns</li>
+<!-- Header -->
+<header>
+  <nav class="container">
+    <div class="logo">Abhiyant Singh</div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <ul id="nav-list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:abhiyantsingh007@gmail.com">abhiyantsingh007@gmail.com</a></p>
-      <p><i class="fas fa-phone"></i> +971 504807641</p>
-      <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@abhiyant_singh" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/abhiyant_singh_/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/abhiyant-singh/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
+    <div class="header-contact" style="display:flex; gap:1rem; align-items:center;">
+      <a href="mailto:abhiyantsingh007@gmail.com" style="color:#fff; font-size:1.2rem;"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+971507142805" style="color:#fff; font-size:1.2rem;"><i class="fas fa-phone-alt"></i></a>
     </div>
-  </section>
+  </nav>
+</header>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Abhiyant Singh. All rights reserved.</p>
-  </footer>
+<!-- Hero -->
+<section class="hero" id="home">
+  <h1>Creative Videographer & Social Media Manager</h1>
+  <p>Over 1,700 videos, viral Shorts, livestreams, and bespoke content for brands.</p>
+  <a href="#portfolio" class="btn">View My Work</a>
+</section>
 
-  <script>
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navList = document.getElementById('nav-list');
-    menuToggle.addEventListener('click', () => {
-      navList.classList.toggle('open');
+<!-- About -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about">
+    <div class="text">
+      <p>I run the YouTube channel <a href="https://www.youtube.com/@DesiGamerDXB" target="_blank" style="color:#f39c12;">@DesiGamerDXB</a> which has grown to a vibrant community.</p>
+      <div class="stats">
+        <div><h3>21.6K</h3><span>Subscribers</span></div>
+        <div><h3>1.7K</h3><span>Videos</span></div>
+      </div>
+      <p style="margin-top:1.5rem;">I’ve handled end-to-end production for top Indian creators, using Canon M50, Zoom H4n, Final Cut Pro, and CapCut to deliver polished, engaging content.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio">
+  <h2 class="section-title">Portfolio</h2>
+  <div class="portfolio">
+    <div class="portfolio-grid">
+      <a href="https://youtu.be/gQ2sPXEgSug" target="_blank" class="portfolio-item">
+        <img src="https://i.ytimg.com/vi/gQ2sPXEgSug/maxresdefault.jpg" alt="Video 1"/>
+        <p>First Video</p>
+      </a>
+      <a href="https://www.youtube.com/shorts/DhzbbOYDdl0" target="_blank" class="portfolio-item">
+        <img src="https://i.ytimg.com/vi/DhzbbOYDdl0/maxresdefault.jpg" alt="Video 2"/>
+        <p>Second Video</p>
+      </a>
+      <a href="https://www.youtube.com/shorts/ZrO8z-yHQUE" target="_blank" class="portfolio-item">
+        <img src="https://i.ytimg.com/vi/ZrO8z-yHQUE/maxresdefault.jpg" alt="Video 3"/>
+        <p>Third Video</p>
+      </a>
+      <a href="https://www.youtube.com/live/X8ffiXSOG7Q" target="_blank" class="portfolio-item">
+        <img src="https://i.ytimg.com/vi/X8ffiXSOG7Q/maxresdefault.jpg" alt="Live Stream"/>
+        <p>Gaming Livestream (26K+ views)</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <h2 class="section-title">Services</h2>
+  <ul class="services-list">
+    <li><i class="fas fa-video"></i> Video Production & Cinematic Shoots</li>
+    <li><i class="fas fa-hashtag"></i> Social Media Content Creation & Management</li>
+    <li><i class="fas fa-cut"></i> Editing (CapCut, Final Cut Pro)</li>
+    <li><i class="fas fa-handshake"></i> Collaboration & Brand Campaigns</li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact">
+    <p><i class="fas fa-envelope"></i> <a href="mailto:abhiyantsingh007@gmail.com">abhiyantsingh007@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> +971 507142805</p>
+    <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@DesiGamerDXB" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/abhiyant_singh_/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/abhiyant-singh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Abhiyant Singh. All rights reserved.</p>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navList = document.getElementById('nav-list');
+  menuToggle.addEventListener('click', () => navList.classList.toggle('open'));
+
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav ul li a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) current = section.getAttribute('id');
     });
-
-    // Active Nav Link on Scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav ul li a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) current = section.getAttribute('id');
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-      });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
     });
-  </script>
+  });
+</script>
 </body>
 </html>
